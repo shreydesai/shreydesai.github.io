@@ -1,0 +1,9 @@
+# Site settings
+title: 'Shrey Desai' # Your Title
+tagline: 'CS Undergraduate at <a href="http://utexas.edu">The University of Texas at Austin</a> // Software Engineering Intern at <a href="http://gosizzle.io">Sizzle</a>' # A brief tagline for your site
+sidebar_image: /images/cover.jpg
+
+# Build settings
+markdown: redcarpet
+highlighter: rouge
+#baseurl: /strange_case # the subpath of your site, e.g. /blog/
