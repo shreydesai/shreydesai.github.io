@@ -13,11 +13,11 @@ body {
 
 body {
   overflow-x: hidden;
-  font-family: 'Bitter', serif;
+  font-family: 'Merriweather', serif;
   font-size: 16px;
   line-height: 28px;
   color: #222;
-  font-weight: 400;
+  font-weight: 300;
   white-space: nowrap;
 }
 
@@ -248,14 +248,14 @@ header ul.meta li span a:hover {
     right: 10px;
     bottom: 10px;
     left: 10px;
-  }  
+  }
 }
 
 @media screen and (max-width: 960px){
   .pagination {
     margin-top: 40px;
     padding: 0 10px;
-  }  
+  }
 }
 
 .pagination:after {
