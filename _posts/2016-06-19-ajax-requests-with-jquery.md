@@ -19,7 +19,9 @@ The request I would get from the client would not be a `GET` request because the
 ## Introduction to AJAX
 
 Requests nowadays are commonly sent through AJAX, which stands for Asynchronous JavaScript and XML. However, a lot of data is sent through JSON these days as a replacement for XML. AJAX should probably be called AJAJ, but I think the former sounds much slicker. Regardless, AJAX is very valuable:
+
 - It is asynchronous in nature, which means that the queue of requests to the server is not interrupted and blocked by a new one, namely the one sent by the client. Even though the `async` parameter in the jQuery call could be set to `false`, I'm pretty sure this is deprecated now.
+
 - It does not require a page refresh for new information to populate because the server handles the AJAX request without making a `GET` request. This makes new information on a website seem "real time." For example, if you visit Google Finance in the middle of the day and click on a company's stock, it will update in real time as a result of AJAX requests to some server.
 
 For the actual jQuery code, `ajax` is a function that we need to declare. It takes some parameters in a JSON format, such as `type`, `dataType`, `data`, `url`, `success`, and `error`. The documentation covers much more variables, but usually not all of them are necessary. This is what an AJAX call would look like for a client requesting Amazon's information.
