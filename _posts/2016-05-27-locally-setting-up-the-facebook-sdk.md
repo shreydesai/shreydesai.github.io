@@ -1,14 +1,12 @@
 ---
 layout: post
 title: "Locally Setting Up the Facebook SDK"
-date: 2016-05-27 07:40:00
-categories: API
-featured_image: /images/cover.jpg
+date: 2016-05-27
 ---
 
-Since its conception, the Facebook SDK has been notorious for being difficult to set up. In comparison to other APIs, Facebook has done a rather poor job making its web services accessible. The learning curve is steep, the documentation is vague, and many elements are hard to use. Personally, I feel like other SDKs/APIs such as Twitter and Soundcloud have been much simpler; maybe this is in part because third-party developers have created wrapper APIs to access the services, but the documentation and support is better overall. 
+Since its conception, the Facebook SDK has been notorious for being difficult to set up. In comparison to other APIs, Facebook has done a rather poor job making its web services accessible. The learning curve is steep, the documentation is vague, and many elements are hard to use. Personally, I feel like other SDKs/APIs such as Twitter and Soundcloud have been much simpler; maybe this is in part because third-party developers have created wrapper APIs to access the services, but the documentation and support is better overall.
 
-Nevertheless, I finally figured how to set up the Facebook SDK on a local server with Node.js and Express. This should work with any web server but because this process is completely undocumented, I'll go through the process. 
+Nevertheless, I finally figured how to set up the Facebook SDK on a local server with Node.js and Express. This should work with any web server but because this process is completely undocumented, I'll go through the process.
 
 ## Registering the app
 

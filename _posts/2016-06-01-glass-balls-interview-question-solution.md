@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Glass Balls Interview Question Solution"
-date: 2016-06-01 01:51:00
-categories: Algorithms
-featured_image: /images/cover.jpg
+date: 2016-06-01
 ---
 
 As I was waiting for a Skype call with [Xperii](http://xperii.com/) - my first technical interview ever - I was nervous to say the least. Upon reading many Glassdoor interview posts, it seemed that startups gave harder questions to their candidates in comparison to bigger companies such as Amazon, Google, Facebook, and Microsoft. Lo and behold, the first question I received was the infamous glass balls question, which was a daunting and challenging problem. After a couple of weeks of introspection, I have come up with a couple of solutions.
@@ -22,13 +20,13 @@ Even though this solution worked, it was very ineffective. For starters, its tim
 
 ## Solution 2: The Interval Solution
 
-This is where I got stumped and was unable to finish the problem. Yet after weeks of pondering, I am now comfortable to share the rest of the solutions to this problem. In the last solution, the steps were equal to $1$, i.e. we tested floor $1$ and then $2$ and then $3$. What if the steps could be larger? 
+This is where I got stumped and was unable to finish the problem. Yet after weeks of pondering, I am now comfortable to share the rest of the solutions to this problem. In the last solution, the steps were equal to $1$, i.e. we tested floor $1$ and then $2$ and then $3$. What if the steps could be larger?
 
-If we dropped the ball at floor $50$, there would be two possibilities. If the ball broke, then we would know 
+If we dropped the ball at floor $50$, there would be two possibilities. If the ball broke, then we would know
 
 $$1 \leq F \leq 50$$
 
-If the ball didn't break, then we would know 
+If the ball didn't break, then we would know
 
 $$51 \leq F \leq 100$$
 
@@ -40,13 +38,14 @@ Given a $N$-story building and $S$ steps, the maximum number of steps required w
 
 $$F(S) = \frac{N}{S} + S + 1$$
 
-For example, if the breaking point of a $100$-story building was $100$, then we would step by $10$ until the ball breaks at floor $100$ - the test sequence would be floor $10$, $20$, $30$, and so on. Then, because the ball breaks at $100$, we would go from $91$ to $100$ with the second ball to find the precise break point. Note that we would not cover floor $90$ because this was already tested with the initial step of $10$. 
+For example, if the breaking point of a $100$-story building was $100$, then we would step by $10$ until the ball breaks at floor $100$ - the test sequence would be floor $10$, $20$, $30$, and so on. Then, because the ball breaks at $100$, we would go from $91$ to $100$ with the second ball to find the precise break point. Note that we would not cover floor $90$ because this was already tested with the initial step of $10$.
 
 Because we need to find the minimum number of steps to achieve the best value with respect to the naïve steps that we have to take, the minimum of the function needs to be found. This can be found easily through calculus.
 
 $$\frac{dF}{dS} = 1 - \frac{N}{S^{2}}$$
-$$\frac{N}{S^{2}} = 1$$
+
 $$S^{2} = N$$
+
 $$S = \sqrt{N}$$
 
 Therefore, the minimum number of intervals required for a $100$-story building would be $\sqrt{100}$, or $10$. Using a skip interval of $10$, we can find a breaking point with the two glass balls. Unlike the naïve solution found above, this algorithm would be much faster.

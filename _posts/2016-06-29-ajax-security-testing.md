@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "AJAX Security Testing"
-date: 2016-06-29 02:08:00
-categories: JavaScript
-featured_image: /images/cover.jpg
+date: 2016-06-29
 ---
 
 The next big project I have at [Sizzle](https://gosizzle.io) is to build a web scraper that parses company information from LinkedIn and dumps the information into the token. This effectively increases user productivity as the recruiter can focus more on job details instead of filling out company information. Because Sizzle runs on a LAMP stack and I wanted to scrape with Python, some glue between the two languages had to be created to successfully respond to the client-side AJAX requests.
@@ -33,7 +31,9 @@ The client has to be thought of as malicious and the server must protect against
 In order to further explore the security vulnerabilities a web application could have with AJAX, I set up a simple application with Python, Flask, and jQuery. It is very minimal in functionality, but this is how it works:
 
 - The client enters his or her name in an input field
+
 - An AJAX POST request is sent to an endpoint on the server
+
 - A script is executed and information is returned to the user
 
 <img src="http://i.imgur.com/ADNJ8G6.png">
@@ -123,7 +123,7 @@ This looks great and all, but the security vulnerability in the application has 
 
 In fact, `ls` is just the tip of the iceberg. Because we're dealing with the shell directly, other commands like `cd` and `rm` work also. This means the hacker could change directories and even delete all of my data:
 
-<img src="http://i.imgur.com/bn16vu1.png">
+<img src="http://i.imgur.com/bn16vu1.png" width="90%">
 
 ## Making AJAX More Secure
 

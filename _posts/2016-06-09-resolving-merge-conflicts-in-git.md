@@ -1,9 +1,7 @@
 ---
 layout: post
 title: "Resolving Merge Conflicts in Git"
-date: 2016-06-09 05:25:00
-categories: Git
-featured_image: /images/cover.jpg
+date: 2016-06-09
 ---
 
 Wrapping up my first week at [Sizzle](http://gosizzle.io), I have learned some important concepts in code collaboration. Putting this into perspective, the internship is remote; this makes it especially important to track, document, and version the code. We have been using Git as our version control system and recently I ran into some troubles merging my code with the existing codebase – a daunting task for newcomers. Luckily, I figured out how to properly use `git merge`, ensuring my code would not break anything in the original repository.

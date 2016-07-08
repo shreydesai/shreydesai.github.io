@@ -1,9 +1,15 @@
 # Site settings
-title: 'Shrey Desai' # Your Title
-tagline: 'CS Undergraduate at <a href="http://utexas.edu">The University of Texas at Austin</a> // Software Engineering Intern at <a href="http://gosizzle.io">Sizzle</a>' # A brief tagline for your site
-sidebar_image: /images/cover.jpg
+title: Shrey Desai
+email: shreydesai@me.com
+description: >
+  Weekly reveries on undergraduate life, computer science, and software engineering
+baseurl: ""
+url: "https://shreydesai.github.com"
+twitter_username: shreydesai
+github_username:  shreydesai
 
 # Build settings
-markdown: redcarpet
-highlighter: rouge
-#baseurl: /strange_case # the subpath of your site, e.g. /blog/
+markdown: kramdown
+sass:
+  sass_dir: css/bower_components/bootstrap-sass/assets/stylesheets
+  style: compressed

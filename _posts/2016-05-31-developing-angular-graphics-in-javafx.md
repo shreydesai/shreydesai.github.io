@@ -1,12 +1,10 @@
 ---
 layout: post
 title: "Developing Angular Graphics in JavaFX"
-date: 2016-05-31 05:47:00
-categories: Java
-featured_image: /images/cover.jpg
+date: 2016-05-31
 ---
 
-For my AP Computer Science final project, my partner and I developed a simple one player, arcade-shooter game called [Dots](https://github.com/shreydesai/dots) in Java on top of the JavaFX GUI framework. The project required a lot of GUI techniques, multithreading and concurrency knowledge, and surprisingly, a lot of trigonometry and algebra. One of the math heavy components of the project was the angular motion of the bullets - the object that hit the enemies to destroy them. 
+For my AP Computer Science final project, my partner and I developed a simple one player, arcade-shooter game called [Dots](https://github.com/shreydesai/dots) in Java on top of the JavaFX GUI framework. The project required a lot of GUI techniques, multithreading and concurrency knowledge, and surprisingly, a lot of trigonometry and algebra. One of the math heavy components of the project was the angular motion of the bullets - the object that hit the enemies to destroy them.
 
 <img src="http://i.imgur.com/kCIVVys.png" width="50%">
 
@@ -32,13 +30,13 @@ Many web and GUI coordinate systems are different from the traditional Cartesian
 
 The large horizontal component was the difference between the ending and starting $x$ coordinate, or $px - cx$. The large vertical component was the same with the $y$ coordinate, or $cy - py$.
 
-The angle could be found with: 
+The angle could be found with:
 
-$$\theta = tan^{-1}(\frac{y}{x})$$ 
+$$\theta = tan^{-1}(\frac{y}{x})$$
 
-Substituting the horizontal and vertical components would yield: 
+Substituting the horizontal and vertical components would yield:
 
-$$\theta = tan^{-1}(\frac{px - cx}{cy - py})$$ 
+$$\theta = tan^{-1}(\frac{px - cx}{cy - py})$$
 
 This angle could then be used to determine the vector components of the smaller triangle.
 
@@ -64,17 +62,17 @@ public Line getLine() {
     double px = coordinates[2];
     double py = coordinates[3];
     double componentX, componentY;
-        
+
     right = px > cx;
-        
+
     if (right) {
         componentX = px - cx;
         componentY = cy - py;
         theta = Math.atan(componentY / componentX);
-            
+
         return new Line(
-            x, cy, 
-            cx + 10 * Math.cos(theta), 
+            x, cy,
+            cx + 10 * Math.cos(theta),
             cy - 10 * Math.sin(theta)
         );
     } else {
@@ -82,8 +80,8 @@ public Line getLine() {
         componentY = py - cy;
         theta = Math.atan(componentY / componentX);
         return new Line(
-            cx, cy, 
-            cx - 10 * Math.cos(theta), 
+            cx, cy,
+            cx - 10 * Math.cos(theta),
             cy + 10 * Math.sin(theta)
         );
     }
