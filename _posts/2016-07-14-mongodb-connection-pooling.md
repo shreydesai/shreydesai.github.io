@@ -4,7 +4,7 @@ title: "MongoDB Connection Pooling"
 date: 2016-07-14
 ---
 
-In the midst of writing an API for [UT Courses](https://github.com/utexasdev/courses), I started suspecting some issues with MongoDB's speed. It was quite obvious that MongoDB couldn't be slow – at the end of the day, it __was__ a top-of-the-line NoSQL database meant for quick and efficient queries. This led me to suspect something was wrong in the way I set up the database or maybe the way I was using the database with my application. Upon reading the MongoDB documentation in depth, I was introduced to a new concept – connection pooling – which ended up solving the speed issue. Because this was the first database optimization I had made to date, an article surrounding this issue was obligatory.
+In the midst of writing an API for [UT Courses](https://github.com/utexasdev/courses), I started suspecting some issues with MongoDB's speed. It was quite obvious that MongoDB couldn't be slow – at the end of the day, it __was__ a top of the line NoSQL database meant for quick and efficient queries. This led me to suspect something was wrong in the way I set up the database or maybe the way I was using the database with my application. Upon reading the MongoDB documentation in depth, I was introduced to a new concept – connection pooling – which ended up solving the speed issue. Because this was the first database optimization I had made to date, an article surrounding this issue was obligatory.
 
 ## The Problem
 
