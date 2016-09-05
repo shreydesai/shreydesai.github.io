@@ -44,4 +44,6 @@ Unfortunately, I have not found out what the secret is to dealing with this. Man
 
 Ultimately, college can be stressful. There is a lot going on and a lot of activities to balance between. Both the social scene and academic life can be stressful. In the beginning, it seems like it is impossible, but after a week or so, you will get into a routine, which will make college seem much less daunting.
 
+Don't be afraid to go out and have fun. Hang out with your friends or go by yourself to walk around campus, dine at notable cafés/restaurants, and attend social events. However, be careful – it's easy to act wild and go crazy with no overarching authority figures. Be responsible, use your best judgement, and most importantly, stay safe.
+
 For those of you that are starting college – good luck!
