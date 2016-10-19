@@ -39,6 +39,7 @@ for each vertex in graph:
 There are a lot of algorithms to do this - some start with the vertices of the highest degree and others group the vertices in some unique manner. This algorithm definitely works for small graphs, but I doubt it will be useful for larger ones. If you're interested, check out the implementation of this algorithm in Java.
 
 `Vertex.java`
+
 ```java
 public class Vertex<E> {
 
@@ -88,6 +89,7 @@ public class Vertex<E> {
 ```
 
 `Edge.java`
+
 ```java
 public class Edge<E> {
 
@@ -110,6 +112,7 @@ public class Edge<E> {
 ```
 
 `Graph.java`
+
 ```java
 import java.util.Map;
 import java.util.HashMap;
@@ -219,6 +222,7 @@ public class Graph<E> {
 ```
 
 `Main.java`
+
 ```java
 import java.util.ArrayList;
 
