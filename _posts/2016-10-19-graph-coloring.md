@@ -4,9 +4,9 @@ title: "Graph Coloring"
 date: 2016-10-19
 ---
 
-The biggest thing I was looking for in my CS courses coming into college was the leveraging theoretical concepts for practical applications. Data structures like trees and stacks are often used in the industry, but there isn't too much discussion of them. Recently in CS 311 (Discrete Mathematics), we covered graph theory, one of the most important topics in computer science. Many objects in the real-world can be modeled as graphs, from social networks to even people shaking hands at a party. One particular topic within graph theory caught my attention - graph coloring. The name itself was interesting, but the underlying concept was fascinating.
+There is nothing more I love in computer science than leveraging theoretical concepts for practical applications. Data structures like trees and stacks are often used in the industry, but there isn't too much discussion of them. Recently in CS 311 (Discrete Mathematics), we covered graph theory. Many objects in the real-world can be modeled as graphs, from social networks to even people shaking hands at a party. Within graph theory, there are a lot of fields of study, but one particular topic caught my attention - graph coloring. The name itself was peculiar, but the underlying concept was truly fascinating.
 
-Graph coloring, as the name suggests, is the process of assigning colors to the vertices in a graph such that no two adjacent vertices share the same color. The chromatic number of a graph $G$ ($\chi{G}$) is the least amount of colors needed to validly color its vertices.
+Graph coloring, as the name suggests, is the process of assigning colors to the vertices in a graph such that no two adjacent vertices share the same color. The chromatic number ($\chi{G}$) of a graph $G$ is the least amount of colors needed to validly color its vertices.
 
 For instance, a complete graph $K_n$ on $n$ vertices has a chromatic number of $n$ because all pairs of vertices $u$ and $v$ have an edge incident to them. However, most graphs are not complete graphs, and so $\chi{G} \le n$.
 
@@ -20,7 +20,7 @@ Now, we must use an algorithm to color the graph. There are many algorithms out 
 
 I wrote a small algorithm to color a graph in Java. The pseudocode is outlined below if you don't want to take a look at the actual code.
 
-```
+```text
 for each vertex in graph:
   if neighbors have no color:
     assign vertex a color
@@ -274,4 +274,4 @@ This means that color 1 is assigned to CS 1 and CS 4, color 2 is assigned to CS 
 
 ![](http://i.imgur.com/1jYNarp.png)
 
-If each color represents some time slot, then the final exams for these five CS classes will not conflict.
+If each color represents some time slot, then the final exams for these five CS classes will not conflict. That wraps up graph coloring - if I come up with any better algorithms in the future, I'll make sure to share them!
