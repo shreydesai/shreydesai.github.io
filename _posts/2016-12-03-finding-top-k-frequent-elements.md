@@ -4,8 +4,6 @@ title: "Top K Frequent Elements"
 date: 2016-12-03
 ---
 
-## Introduction
-
 In the beginning of the semester, I was truly perplexed as to why I had to take a course on data structures. The first thing our professor told us was that data structures were, by definition, variables that held other variables. Yet, there seemed to be a craze about the importance of data structures and algorithms, especially in software engineering.
 
 Back when I took AP Computer Science, I found most of my computer science problems being solved by the most minimal data structure out there - the array. Because an array could have many declared types, it could hold all sorts of data. Arrays were easy to create, didn't have that many searching procedures, and were - most importantly - the only data structure that I was aware of.
