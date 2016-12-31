@@ -14,7 +14,7 @@ Integer sorting is a topic within sorting that is of much interest because it be
 
 As alluded to above, quicksort and merge sort rely on comparative models that require a base sorting complexity of $\Omega(n \log(n))$. This means that under the comparison model, it is impossible to have fewer than $n \log (n)$ steps. This is because the comparison model relies on two values - `True` and `False` - which dictate where a value goes in the sorted list.
 
-Both quicksort and merge sort rely on inequality and equality operators to determine if one object is "greater" or "less" than another. The number of comparisons for any input of size $n$ is at most $\log (n!)$, which comes out to be $\Theta n \log (n)$. This implies that if an algorithm uses comparisons to sort, then it has to be $\Omega (n \log (n))$.
+Both quicksort and merge sort rely on inequality and equality operators to determine if one object is "greater" or "less" than another. The number of comparisons for any input of size $n$ is at most $\log (n!)$, which comes out to be $\Theta (n \log (n))$. This implies that if an algorithm uses comparisons to sort, then it has to be $\Omega (n \log (n))$.
 
 In order to sort in $O(n)$ time, algorithms need to rely on other methods of sorting. When I first thought of this, I thought it was crazy because I believed numbers had to be compared with other numbers in a list for the list to be sorted. It was hard to imagine sorting a list by picking out a number and not comparing it to other numbers. But, this is where distributive sorting proved me wrong.
 
@@ -57,4 +57,4 @@ The complexity analysis for radix sort is a little complicated, but it comes out
 
 In order to satisfy my desire to compare the performance of merge sort and radix sort, I designed a small experiment to see how each would handle sorting a big list of integers. Each list had varying amounts of integers (from 10 to 1 million) with numbers up to five digits in size. Radix sort performed much better than merge sort, proving its finesse in sorting straight integers.
 
-![](http://i.imgur.com/lVcP14A.png)
+<img src="http://i.imgur.com/lVcP14A.png" width="95%">
