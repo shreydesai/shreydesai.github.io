@@ -49,6 +49,7 @@ kth_element = inverted_freqs[kth_frequency]
 ```
 
 Put together, the algorithm looks like this:
+
 ```python
 def top_k_frequent(nums, k):
     freqs = {}
@@ -78,7 +79,7 @@ Though this solution works, it's not that efficient.
 
 - Inverting the frequency map is also $O(n)$ where $n$ is the number of keys in the map.
 
-- Most of the algorithm's overhead would probably come through sorting, which is $O(n\logn)$ assuming the frequencies are not in natural order.
+- Most of the algorithm's overhead would probably come through sorting, which is $O(nlog(n))$ assuming the frequencies are not in natural order.
 
 - Querying the frequency map does not depend on the size of any list, so it would be a $O(1)$ operation.
 
@@ -184,4 +185,4 @@ Though the algorithm seems quite long, it's actually much more efficient than th
 
 The total complexity of this algorithm would be about $O(n + nlog(k))$ or $O(nlog(k))$ for simplicity, which definitely beats the algorithm above. The algorithm was also quite trivial when a heap was used because we were directly exploiting the property of a max heap.
 
-In conclusion, the intent of this article was to demonstrate that algorithmic thinking should not be a top down approach, where we use the same data structure or approach for each problem. Rather, data structures exist because we can organize and retrieve data in different ways, some vastly efficient than others. In this case, the heap was far better than an array or hash map alone. 
+In conclusion, the intent of this article was to demonstrate that algorithmic thinking should not be a top down approach, where we use the same data structure or approach for each problem. Rather, data structures exist because we can organize and retrieve data in different ways, some vastly efficient than others. In this case, the heap was far better than an array or hash map alone.
