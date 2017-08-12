@@ -4,56 +4,63 @@ title: "Microsoft Explorer Interviews"
 date: 2016-10-28
 ---
 
-Last week, I had the opportunity to spend three days with Microsoft interviewing as an intern for their Explorer program. For those that are not familiar with this program, it is a 12-week summer internship where interns can "explore" software engineering and program management by working on a particular product with a team at Microsoft. After I received an email from my recruiter saying that I was invited to the on-campus interviews, I frantically started finding material to prep for. The Explorer interviews are a little vague because they aren't 100% technical nor 100% behavioral - a unique blend of both. The intent of this article is to aid future Explorer candidates in better understanding what the on-site interviews are like and how to prepare for them.
+Last week, I had the privilege of spending three days with Microsoft interviewing as a candidate for their Explorer program. The [Microsoft Explorer](https://careers.microsoft.com/students/explore) program is a 12-week paid summer internship where interns can _explore_ software engineering and program management. Groups of two to three interns are assigned a team and an impactful summer project.
 
-## Pre Interviews
+After I received an email from my recruiter saying I was moving on to the final round interviews, I started finding material to prep with. The interviewing process was a little vague because it wasn't supposed to be 100% technical nor 100% behavioral. The intent of this article is to aid future Explorer candidates in better understanding what the on-site interviews are like and, most importantly, how to prepare for them.
 
-I had about two weeks before I had to fly to Redmond for the on-site interviews. During this time, I read every article on Quora regarding Explorer interviews, scoured Glassdoor for interview questions I could prepare for, and consulted with previous interns regarding their experience. I ended up compiling a large document with a bunch of interview questions - technical, product design, behavioral - I had it all.
+## Pre-Interviews
 
-The recruiter told us that Microsoft asked questions that got at the thought process of the candidate. So, some questions would obviously be ambiguous; what was important was not the solution but rather how a candidate approached the question. This sort of creativity was difficult to prepare for because one cannot obviously increase the amount of creativity he or she has during the span of a week. Nevertheless, I tried my best to prep myself - each day, for about an hour, I would go through interview questions in hopes that some would be asked in my on-campus interviews.
+I had about two weeks before I had to fly to Redmond, WA for the on-site interviews. During this time, I practically read every article and post on Quora and Glassdoor pertaining to the Explorer internship. After a lot of Internet browsing, I ended up compiling a large document with technical, product design, and behavioral interview questions.
+
+Recruiters mentioned that Microsoft asked questions that tried to decipher the thought process of the candidate. Some questions would be intentionally ambiguous -- what was important was the approach, not the solution. These sorts of questions were difficult to prepare for because one couldn't change their thought process overnight. Nevertheless, I tried my best to prep -- each day, for about an hour, I went through interview questions in hopes that some would be asked in my on-site interviews.
+
 
 ## Interview 1
 
-My first interviewer was a software engineer on Azure. He started the interview by going down my resume, asking me probing questions about my projects and previous summer internship. Because I had worked on creating an internal RESTful API at Sizzle, he asked me about different HTTP requests, namely GET, POST, and PUT.
+My first interviewer was a software engineer on Azure. He began by going down my resume, asking me probing questions about my projects and previous summer internship. Because I had worked on creating an internal RESTful API at [Sizzle](https://angel.co/sizzle), he asked me about the functionality surrounding HTTP methods like GET, POST, and PUT and the differences between POST and PUT.
 
-I had also worked with different databases - MongoDB and Redis - in my personal projects. He asked me about the differences between MongoDB and Redis, in which cases I would use one over the other, and why NoSQL might be a better option than SQL.
+In one personal project, I had used MongoDB and Redis, two popular databases. He asked me about the differences between the two, cases where someone would use one over the other, and the tradeoffs between SQL and NoSQL.
 
-Afterwards, he asked me an interesting Redis question. Basically, if the caching process to Redis (from the main database) failed but the user requested data, the server would look for the key in Redis first. However, assuming the caching process failed, the key in Redis would not be updated and therefore the user would get old data.
+Continuing with this thread, he asked me an intriguing Redis question. If a cache write to Redis failed but a user requested said data, the back-end would look in the cache first. However, the key would not be there and the user would ultimately receive stale data. So, how would Redis handle these cases? At the time, I thought it might have something to do with timestamps, which was along the [right track](https://redis.io/commands/ttl).
 
-We eventually got the main question for the interview, which was to implement Cron, a time scheduling manager on Linux systems. Cron is useful in scenarios where tasks have to be completed at a particular schedule; essentially, once a particular "time" is reached, its respective function is called.
+We eventually got to the main interview question, which was to implement [Cron](https://en.wikipedia.org/wiki/Cron), the UNIX time-based job scheduler. I started with a mediocre solution but got closer to the optimal solution after discussing the problem with the interviewer.
 
-I was pleasantly surprised by the caliber of these questions. It was nothing like I had seen on Glassdoor, but I was reasonably prepared to answer them. In retrospect, it makes sense that these questions were asked because they were tailored to my background, and more specifically, my resume.
+I was pleasantly surprised by the caliber of these questions. It was _nothing_ like I had seen on Glassdoor -- I thought I was being interviewed for a regular software engineering intern position.
 
 ## Interview 2
 
-For the second interview, I spoke with a software engineer on the Azure Automation team. We briefly went over my resume; he was interested in learning more about a web crawler that I made as a part of one of my projects. On the whiteboard, he wanted me to explain the general algorithm of how my web crawler would traverse the inputted website.
+For the second interview, I spoke with a software engineer on the Azure Automation team. We briefly went over my resume and my interviewer asked me some questions regarding the web crawling process used in [UT Courses](https://github.com/utexasdev/courses). On the whiteboard, he wanted me to explain at a high-level the algorithm of how my web crawler would traverse target websites.
 
-Next, he asked me a question about arrays, which was a graph question in disguise. High level, it basically asked me to find whether a cycle existed in the graph. Formally, it said that given an index $i$ in array $A$, if $A[i] > 0$, then move forward $A[i]$ spaces. If $A[i] < 0$, then move backward $A[i]$ spaces. Determine if there is a loop where there exists a path between two indices $i$ and $j$ in $A$ where $i,j \in D$.
+Next, he asked me an interesting array question. We are given an array `nums` of unsorted integers. Given some arbitrary index `i`, if `nums[i] > 0`, then you can move forward `nums[i]` spaces. If `nums[i] < 0`, then you can move backwards `nums[i]` spaces. Determine if there is a loop between two arbitrary indices `i` and `j` in `nums`. If you're interested, this is the [Circular Array Loop](https://leetcode.com/problems/circular-array-loop/description/) question on Leetcode.
 
 ## Interview 3
 
-The third interview went the best. The interviewer was a software engineer on the Azure Log Analytics/Security team, so he was doing a lot of cool work, which he told me about when the interview was over.
+The third interview went the best. The interviewer was a software engineering manager on the Azure Log Analytics/Security team, so he was doing a lot of fascinating work which he told me about when the interview was over.
 
-The question he asked me was interesting because it required to formulate a data structure to solve a problem in the real world. Tracking browser history was something I had never considered, but I was required to implement a back-end API front-end developers could use when tracking a user's history in a browser. I had to define an interface, come up with tests and edge cases, and optimize the solution when there were more requirements to be met.
+The first question he asked me was interesting because it required me to solve a real-world problem using data structures. He asked me to implement an API that developers could use when tracking browser history. There were many different data structures one could use to solve this problem -- such as stacks or linked lists -- so this left room to discuss the pros and cons of each one. I had to define an interface, come up with tests, discover edge cases, and optimize the solution.
 
-The second question was a string parsing problem. Given a string, I had to print out all the patterns of A's and B's. So, for instance, a string $AaheaabelloaaabB$ would print out $Aa$, $aa$, $b$, $aaa$, and $bB$.
+The second question was a basic string parsing problem. Given a string, print out all patterns of A's and B's. For example, the string `AaheaabelloaaabB` contains the patterns `Aa`, `aa`, `b`, `aaa`, and `bB`.
 
-## Post Interviews
+## Post-Interviews
 
-Because all my interviews were technical and I wasn't given a single behavioral or product design question, I was upset with how the interviews went. Every single question I was asked was a question that I had never encountered before.
+Because each interview was 100% technical and I wasn't given a single behavioral or product design question, I was upset with how the interviews went. Every single question I was asked was something I had never encountered in my preparation.
 
-In retrospect, this was an important skill to learn because there will always be a technical question that is outside the scope of what one has prepared for. It is a very useful skill to understand the problem, come up with different solutions, and then optimize them.
+In retrospect, this was an important lesson to learn because interviewers will try to ask questions that is outside the scope of what a candidate has prepared for. It is a _very_ useful skill to fully understand a problem, come up with various solutions, and optimize them when requirements change.
 
-Regardless of how the interviews went, we were given a free jacket afterwards and $55 to sightsee Seattle. I had a couple of friends at the University of Washington, so I went to go visit them. Later that night, we enjoyed a nice Thai meal on Microsoft's expenses!
+After the interviews, we were given a free Microsoft jacket and $55 to explore Seattle! I had a couple of friends studying at the University of Washington, so I went to visit them. We enjoyed a meal at [Little Thai](https://www.yelp.com/biz/little-thai-restaurant-seattle) on Microsoft's expenses.
 
-Overall, the experience was great. It was my first time being blown out to an on-site interview. I had a great time speaking with other candidates. They were all over the nation - from Harvard to Iowa State.
+Ultimately, the experience was phenomenal. It was my first time being flown out to an on-site interview, staying at an extravagant hotel with all expenses paid, and speaking with candidates all over the nation.
 
-## Decision
+## Decision Day
 
-It took about a week for the recruiter to get back to me with a decision. I was getting very nervous during this time because a girl I had met from Harvard during the interviews had already gotten a response a couple of days after the interview. On Quora, I had read that if Microsoft takes over a week to get back to candidates, those candidates are on the "maybe" pile.
+It took exactly a week for a recruiter to get back to me with a decision. I was getting very nervous because other candidates had already heard back with their decisions by the time I received mine.
 
-Fortunately, the recruiter contacted me on the Wednesday after with an offer! I was ecstatic and shouted a couple of times in my dorm room before settling down. Based on my interview performance and interests, I was placed in the Cloud Enterprise and Management division, which is exactly where I wanted to work. Microsoft has been doing really well with Azure lately - because I worked with AWS at my previous internship, I wanted to get experience with Azure.
+Fortunately, I received an offer! I was ecstatic and shouted a couple of times in my room before settling down. Based on my preferences and interview performance, I was placed on the [Azure Stack](https://azure.microsoft.com/en-us/overview/azure-stack/) team in the Cloud Enterprise and Management group. This was exactly where I wanted to work. I had worked with AWS at my previous internship, so I wanted to get experience with Azure.
 
-I hope this article shed some light on what the Microsoft interviews are like and what to expect. In terms of the Explorer interviews themselves, I eventually figured that the questions interviewers asked are tailored to each candidates' experiences and resume. It should not have come as a surprise that I didn't get a basic array reversal question.
+## Concluding Remarks
 
-Microsoft doesn't look for candidates that merely know things, but rather looks for a potential to grow. The best interview prep one can do is do a combination of technical and product design questions that he or she has never seen before. Catching someone off-guard is probably the best way to evaluate their thought process. Anyways, good luck for your interviews and find me on social media if you have any questions!
+I hope this article shed some light on what the Microsoft interview process is like and what to expect. Generally speaking, interviewers ask questions that are tailored to each candidates' experiences and resume. It should not have come as a surprise that I didn't get standard string or array reversal questions. Don't be discouraged if some of my questions seemed difficult -- there's a high chance yours might be different.
+
+Here's the takeaway -- Microsoft doesn't look for candidates that memorize and regurgitate knowledge, but rather those that show a strong potential to grow and learn. The best interview preparation you can do is tackling technical, behavioral, and product design questions you have _never_ seen before. Catching someone off-guard offers a unique way into probing his or her thought process and analytical skills.
+
+If you have questions about submitting an application, the interview process, or the Explorer program in general, don't hesitate to reach to me on social media!

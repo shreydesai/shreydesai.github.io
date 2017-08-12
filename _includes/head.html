@@ -2,19 +2,24 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Reveries on undergraduate life, computer science, and software engineering.">
+  <meta name="author" content="Shrey Desai">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Shrey Desai">
+  <meta property="og:image" content="http://shreydesai.github.io/images/profile.png">
+  <meta property="og:title" content="Shrey Desai">
+  <meta property="og:description" content="Reveries on undergraduate life, computer science, and software engineering.">
 
   <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
-
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800,600" rel="stylesheet" type="text/css">
-	<link href="https://fonts.googleapis.com/css?family=Muli:400,300" rel="stylesheet" type="text/css">
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
-  <!-- Syntax highlighting -->
-  <link rel="stylesheet" href="{{ "/css/code.css" | prepend: site.baseurl }}">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.5.0/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Heebo:400,500,700" rel="stylesheet">
 
   <!-- MathJax -->
   <script type="text/x-mathjax-config">
@@ -24,5 +29,4 @@
   </script>
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
 </head>

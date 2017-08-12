@@ -2,20 +2,17 @@
 layout: default
 ---
 
-<div class="container-fluid">
-  <div id="content" class="row-fluid">
+<div class="home">
+
+  <ul class="post-list">
     {% for post in site.posts %}
-      <div id="post" class="col-md-12">
-        <h1>
-          <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h1>
-        <h2>{{ post.date | date: "%B %-d, %Y" }}</h2>
-        <p>{{ post.excerpt | strip_html | truncatewords:50 }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}">
-          <button class="btn btn-success">Continue Reading</button>
-        </a>
-        <hr>
-      </div>
+      <li>
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+      </li>
     {% endfor %}
-  </div>
+  </ul>
+
 </div>
