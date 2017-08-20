@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Reflecting on Microsoft"
-date: 2016-08-18
+date: 2017-08-18
 ---
 
 ## Introduction
