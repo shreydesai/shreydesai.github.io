@@ -159,8 +159,8 @@ pre {
  * Wrapper
  */
 .wrapper {
-    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 3));
+    max-width:         calc(#{$content-width} - (#{$spacing-unit} * 3));
     margin-right: auto;
     margin-left: auto;
     padding-right: $spacing-unit;
@@ -230,9 +230,9 @@ pre {
     }
 
     img {
-        width: 9em;
+        width: 6em;
         border-radius: 50%;
-        margin-bottom: 2%;
+        margin-bottom: 0%;
     }
 
     .icons img {

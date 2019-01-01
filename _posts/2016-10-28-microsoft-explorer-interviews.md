@@ -2,6 +2,7 @@
 layout: post
 title: "Microsoft Explorer Interviews"
 date: 2016-10-28
+comments: true
 ---
 
 Last week, I had the privilege of spending three days with Microsoft interviewing as a candidate for their Explorer program. The [Microsoft Explorer](https://careers.microsoft.com/students/explore) program is a 12-week paid summer internship where interns can _explore_ software engineering and program management. Groups of two to three interns are assigned a team and an impactful summer project.

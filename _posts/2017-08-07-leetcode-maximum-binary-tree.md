@@ -2,6 +2,7 @@
 layout: post
 title: "Leetcode - Maximum Binary Tree"
 date: 2017-08-07
+comments: true
 ---
 
 This week, I'm going to cover the [Maximum Binary Tree](https://leetcode.com/contest/leetcode-weekly-contest-44/problems/maximum-binary-tree/) problem. It's an interesting tree problem that combines multiple concepts such as searching, traversals, and recursion.

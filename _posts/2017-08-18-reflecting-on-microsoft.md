@@ -2,6 +2,7 @@
 layout: post
 title: "Reflecting on Microsoft"
 date: 2017-08-18
+comments: true
 ---
 
 ## Introduction

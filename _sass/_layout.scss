@@ -6,7 +6,8 @@
     //border-top: 5px solid $grey-color-dark;
     //border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
-    padding: 3% 0%;
+    padding-top: 3%;
+    padding-bottom: 3%;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -193,9 +194,15 @@
 
 .post-link {
     display: block;
-    font-size: 20px;
+    font-size: 18px;
 }
 
+.landing {
+    .wrapper {
+        max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 5));
+        max-width:         calc(#{$content-width} - (#{$spacing-unit} * 5));
+    }
+}
 
 
 /**
@@ -203,11 +210,16 @@
  */
 .post-header {
     margin-bottom: $spacing-unit;
+
+    .post-meta {
+        text-align: center;
+    }
 }
 
 .post-title {
-    font-size: 32px;
-    letter-spacing: -1px;
+    font-size: 26px;
+    text-align: center;
+    //letter-spacing: -1px;
     line-height: 1;
 
     @include media-query($on-laptop) {
@@ -217,8 +229,10 @@
 
 .post-content {
     margin-bottom: $spacing-unit;
+    text-align: justify;
 
     h2 {
+        font-weight: bold;
         font-size: 26px;
         margin-bottom: 2%;
 

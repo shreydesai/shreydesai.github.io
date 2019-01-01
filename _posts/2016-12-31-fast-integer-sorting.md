@@ -2,6 +2,7 @@
 layout: post
 title: "Fast Integer Sorting"
 date: 2016-12-31
+comments: true
 ---
 
 Sorting has remained an important topic of discussion in computer science. Sorting is extremely useful in canonicalizing data and producing human-readable output. Further, recursive and dynamic programming algorithms have considerable speed improvements when given sorted inputs.
