@@ -1,18 +1,119 @@
----
-layout: default
----
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-18504233-5"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-<div class="home">
+      gtag('config', 'UA-18504233-5');
+    </script>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
-      </li>
-    {% endfor %}
-  </ul>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta property="og:site_name" content="Shrey Desai">
+    <meta property="og:type" content="website">
 
-</div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        p {
+            font-size: 0.9rem;
+        }
+        .pubs a {
+            font-size: 0.8rem;
+        }
+        h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        img {
+            border-radius: 50%; 
+            width: 120px;
+        }
+        .container {
+            padding: 0 15%;
+        }
+        .row {
+            margin: 3rem 0rem;
+        }
+    </style>
+
+    <title>Shrey Desai</title>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 align-self-center">
+                <div class="text-center">
+                    <img src="static/img.png">
+                </div>
+            </div>
+            <div class="col-6 align-self-center">
+                <div class="text-left">
+                    <h2>Shrey Desai</h2>
+                    <a href="static/shreyd_cv.pdf">[cv]</a> <a href="mailto:shreydesai@utexas.edu">[email]</a> <a href="https://scholar.google.com/citations?user=3aZdFMgAAAAJ">[google scholar]</a>
+                </div>
+            </div>
+        </div>
+        <h3>About Me</h3>
+        <p>I'm an (incoming) software engineer at <a href="https://www.facebook.com">Facebook</a>. Previously, I received my BS in Computer Science at <a href="https://www.utexas.edu">The University of Texas at Austin</a>, where I worked with <a href="https://jjessyli.github.io">Jessy Li</a> and <a href="https://www.cs.utexas.edu/~gdurrett/">Greg Durrett</a> on natural language processing research.</p>
+        <hr>
+        <div class="pubs">
+            <h3>Publications</h3>
+            <p>
+                Detecting Perceived Emotions in Hurricane Disasters<br>
+                <u>Shrey Desai</u>, Cornelia Caragea, Junyi Jessy Li. ACL 2020.<br>
+                <a href="https://arxiv.org/pdf/2004.14299.pdf">[paper]</a> <a href="https://github.com/shreydesai/hurricane">[code]</a>
+            </p>
+            <p>
+                Calibration of Pre-trained Transformers<br>
+                <u>Shrey Desai</u>, Greg Durrett. arXiv 2020.<br>
+                <a href="https://arxiv.org/pdf/2003.07892.pdf">[paper]</a> <a href="https://github.com/shreydesai/calibration">[code]</a>
+            </p>
+            <p>
+                Lightweight Convolutional Representations for On-Device NLP<br>
+                <u>Shrey Desai</u>, Geoffrey Goh, Arun Babu, Ahmed Aly. MLSys On-Device 2020 (Oral).<br>
+                <a href="https://arxiv.org/pdf/2002.01535.pdf">[paper]</a> <a href="https://github.com/facebookresearch/pytext">[code]</a> <a href="">[slides]</a> <a href="">[poster]</a>
+            </p>
+            <p>
+                Evaluating Lottery Tickets Under Distributional Shifts<br>
+                <u>Shrey Desai</u>, Hongyuan Zhan, Ahmed Aly. EMNLP DeepLo 2019 (Oral).<br>
+                <a href="https://arxiv.org/pdf/1910.12708.pdf">[paper]</a> <a href="https://github.com/facebookresearch/pytext">[code]</a> <a href="talks/dza_deeplo2019_slides.pdf">[slides]</a> <a href="static/dza_deeplo2019_poster.pdf">[poster]</a>
+            </p>
+            <p>
+                Adaptive Ensembling: Unsupervised Domain Adaptation for Political Document Analysis<br>
+                <u>Shrey Desai</u>, Barea Sinno, Alex Rosenfeld, Junyi Jessy Li. EMNLP 2019.<br>
+                <a href="https://arxiv.org/pdf/1910.12698.pdf">[paper]</a> <a href="https://github.com/shreydesai/adaptive-ensembling">[code]</a> <a href="static/dsrl_emnlp2019_poster.pdf">[poster]</a>
+            </p>
+        </div>
+        <hr>
+        <h3>Awards</h3>
+        <p>
+            College of Natural Sciences Dean's Honored Graduate (Top 1% of Graduating Seniors) (2020)<br>
+            College of Natural Sciences Research Distinction (2020)<br>
+            College of Natural Sciences Undergraduate Research Fellowship (2020)<br>
+            Computing Research Association Outstanding Undergraduate Researcher Award, Honorable Mention (2020)<br>
+            Empirical Methods in Natural Language Processing Student Scholarship (2019)<br>
+            Lala Fay & Claude DeVan Watts Endowed Presidential Scholarship (2019)
+        </p>
+        <hr>
+        <h3>Service</h3>
+        <p>
+            Reviewer, SIGDIAL (2020)<br>
+            Teaching Assistant, Natural Language Processing (2020)<br>
+            Teaching Assistant, Operating Systems (2018)<br>
+        </p>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

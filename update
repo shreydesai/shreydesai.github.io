@@ -1,0 +1,4 @@
+chmod -R o+r *
+chmod -R o+r static/*
+chmod -R o+r papers/*
+echo updated
